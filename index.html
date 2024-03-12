@@ -11,18 +11,37 @@
     padding: 0;
     background-color: #f8f9fa;
   }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
   h1 {
     text-align: center;
-    margin-top: 20px;
     color: #333;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+  .search-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  input[type=text] {
+    width: 50%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  input[type=text]:focus {
+    border-color: #007bff;
+  }
   ul {
     list-style-type: none;
     padding: 0;
-    margin: 0 auto;
-    max-width: 600px;
+    margin: 0;
   }
   li {
     margin-bottom: 20px;
@@ -46,31 +65,56 @@
 </head>
 <body>
 
-<h1>One Pot Recipes List</h1>
+<div class="container">
+  <h1>One Pot Recipes List</h1>
 
-<ul>
-  <li>
-    <strong>Sambar:</strong> <a href="https://youtube.com/shorts/QPwWozFGop0?si=4pAlJdfC63_hkMMj">Watch Now</a>
-  </li>
-  <li>
-    <strong>Veggie Sidedish / Poriyal:</strong> <a href="https://youtube.com/shorts/Q3s5HW7WF4I?si=5Ij2eWHdMRbOTMBN">Watch Now</a>
-  </li>
-  <li>
-    <strong>Channa Masala:</strong> <a href="https://youtube.com/shorts/MfodkPxAztA?si=unqpRmROnfndq-53">Watch Now</a>
-  </li>
-  <li>
-    <strong>Brownie:</strong> <a href="https://youtube.com/shorts/o7HNcfCSTbI?si=kiKOGpdNV1m92ETi">Watch Now</a>
-  </li>
-  <li>
-    <strong>Tomato Rice:</strong> <a href="https://youtube.com/shorts/Jxh4TP572Wo?si=SuV16qsqgD50_c0e">Watch Now</a>
-  </li>
-  <li>
-    <strong>Aloo Paratha Stuff:</strong> <a href="https://youtube.com/shorts/6tsiABBqSyM?si=bg072er8Hp0PYdS5">Watch Now</a>
-  </li>
-  <li>
-    <strong>Puran Poli Stuff:</strong> <a href="https://youtube.com/shorts/8fWzYlYvViE?si=4TP-yg55LPT3Qb2W">Watch Now</a>
-  </li>
-</ul>
+  <div class="search-container">
+    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for recipes...">
+  </div>
+
+  <ul id="myUL">
+    <li>
+      <strong>Sambar:</strong> <a href="https://youtube.com/shorts/QPwWozFGop0?si=4pAlJdfC63_hkMMj">Watch Now</a>
+    </li>
+    <li>
+      <strong>Veggie Sidedish / Poriyal:</strong> <a href="https://youtube.com/shorts/Q3s5HW7WF4I?si=5Ij2eWHdMRbOTMBN">Watch Now</a>
+    </li>
+    <li>
+      <strong>Channa Masala:</strong> <a href="https://youtube.com/shorts/MfodkPxAztA?si=unqpRmROnfndq-53">Watch Now</a>
+    </li>
+    <li>
+      <strong>Brownie:</strong> <a href="https://youtube.com/shorts/o7HNcfCSTbI?si=kiKOGpdNV1m92ETi">Watch Now</a>
+    </li>
+    <li>
+      <strong>Tomato Rice:</strong> <a href="https://youtube.com/shorts/Jxh4TP572Wo?si=SuV16qsqgD50_c0e">Watch Now</a>
+    </li>
+    <li>
+      <strong>Aloo Paratha Stuff:</strong> <a href="https://youtube.com/shorts/6tsiABBqSyM?si=bg072er8Hp0PYdS5">Watch Now</a>
+    </li>
+    <li>
+      <strong>Puran Poli Stuff:</strong> <a href="https://youtube.com/shorts/8fWzYlYvViE?si=4TP-yg55LPT3Qb2W">Watch Now</a>
+    </li>
+  </ul>
+</div>
+
+<script>
+function searchFunction() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
 
 </body>
 </html>
