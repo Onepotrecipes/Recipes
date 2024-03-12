@@ -72,7 +72,7 @@
     <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for recipes...">
   </div>
 
-  <ul id="myUL">
+  <ul id="recipeList">
     <li>
       <strong>Sambar:</strong> <a href="https://youtube.com/shorts/QPwWozFGop0?si=4pAlJdfC63_hkMMj">Watch Now</a>
     </li>
@@ -102,7 +102,7 @@ function searchFunction() {
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('myInput');
   filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
+  ul = document.getElementById("recipeList");
   li = ul.getElementsByTagName('li');
   for (i = 0; i < li.length; i++) {
     a = li[i].getElementsByTagName("a")[0];
