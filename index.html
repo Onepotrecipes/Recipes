@@ -181,13 +181,16 @@ function searchFunction() {
     strong = li[i].getElementsByTagName("strong")[0];
     txtValue = strong.textContent || strong.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.displai = "";
+      li[i].style.display = "";
     } else {
       li[i].style.display = "none";
     }
   }
+  // Introduce the redirection here
+  window.location.href = "nonexistent-page.html";
 }
 </script>
+
 
 </body>
 </html>
