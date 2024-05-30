@@ -84,6 +84,15 @@
     text-decoration: underline;
   }
 </style>
+  <script src="//rum-static.pingdom.net/pa-665846e668cac40012000bc7.js" async></script>
+<script>
+  // Simulate delay for 5 seconds
+  window.onload = function() {
+    setTimeout(function(){
+      document.getElementById("content").style.display = "block";
+    }, 5000); // 5000 milliseconds = 5 seconds
+  };
+</script>
 </head>
 <script src="//rum-static.pingdom.net/pa-665846e668cac40012000bc7.js" async></script>
 <body>
@@ -171,10 +180,6 @@
 </footer>
 
 <script>
-    // Delay function to show the content after 5 seconds
-setTimeout(function(){
-  document.getElementById("content").style.display = "block";
-}, 5000); // 5000 milliseconds = 5 seconds
 function searchFunction() {
   var input, filter, ul, li, strong, i, txtValue;
   input = document.getElementById('myInput');
