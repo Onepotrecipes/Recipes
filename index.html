@@ -2,18 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Simulate 404 / Server Error</title>
+  <title>Fake Downtime</title>
+  <script>
+    // Immediately redirect to a non-existent local server
+    window.location.href = "http://localhost:9999";
+  </script>
 </head>
 <body>
-  <h1>Testing Network Errors</h1>
-
-  <!-- This will show a 404 in the Network tab -->
-  <img src="/this-file-does-not-exist.jpg" alt="Will 404" />
-
-  <!-- This will simulate server unreachability (connection error) -->
-  <script>
-    fetch("http://localhost:9999/some-dead-endpoint")
-      .catch(err => console.log("Simulated server down:", err));
-  </script>
+  <p>Redirecting...</p>
 </body>
 </html>
