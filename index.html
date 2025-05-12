@@ -2,23 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 Not Found</title>
-  <script>
-    // This script will only help when serving via JS-based environments.
-    // For static hosting, the server must return a 404 status code itself.
-    document.addEventListener("DOMContentLoaded", () => {
-      // Attempt to set status code via Service Workers or similar only
-      console.log("404 page loaded");
-    });
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Simulate 404 / Server Error</title>
 </head>
-<body class="bg-gray-100 text-center h-screen flex items-center justify-center">
-  <div>
-    <h1 class="text-6xl font-bold text-red-600 mb-4">404</h1>
-    <p class="text-2xl text-gray-700 mb-8">Page Not Found</p>
-    <a href="/" class="text-blue-500 hover:underline">Go back home</a>
-  </div>
+<body>
+  <h1>Testing Network Errors</h1>
+
+  <!-- This will show a 404 in the Network tab -->
+  <img src="/this-file-does-not-exist.jpg" alt="Will 404" />
+
+  <!-- This will simulate server unreachability (connection error) -->
+  <script>
+    fetch("http://localhost:9999/some-dead-endpoint")
+      .catch(err => console.log("Simulated server down:", err));
+  </script>
 </body>
 </html>
