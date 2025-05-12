@@ -91,11 +91,6 @@
 </style>
 </head>
 <body>
-<script>
-  const error = new Error("Page not found");
-  error.code = 404;
-  throw error;
-</script>
 <header>
  <img src="Onepotrecipes.png" alt="Logo" style="width: 15%; height: auto; margin-top: 20px;">
 </header>
@@ -194,6 +189,7 @@ function searchFunction() {
       }
     }
   }
+  window.location.href = "nonexistent-page.html";
 }
 </script>
 
