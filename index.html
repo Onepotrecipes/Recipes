@@ -2,142 +2,199 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YC1W6FEMH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-6YC1W6FEMH');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>One Pot Recipes List</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #F2F2F2;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    header {
-      text-align: center;
-      padding-bottom: 20px;
-    }
-    header img {
-      max-width: 100%;
-      height: auto;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding-top: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-top: 0;
-      background-color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .search-container {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    input[type=text] {
-      width: 50%;
-      padding: 10px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      outline: none;
-    }
-    input[type=text]:focus {
-      border-color: #007bff;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    li {
-      margin: 20px 5px;
-      line-height: 1.6;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 10px;
-    }
-    strong {
-      font-weight: bold;
-    }
-    a {
-      text-decoration: none;
-      color: #007bff;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6YC1W6FEMH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6YC1W6FEMH');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Pot Recipes List</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  header img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  footer {
+    text-align: center;
+    padding-top: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+    background-color: #fff; /* White background */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .search-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  input[type=text] {
+    width: 50%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  input[type=text]:focus {
+    border-color: #007bff;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin: 20px 5px;
+    line-height: 1.6;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+  }
+  strong {
+    font-weight: bold;
+  }
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
 </head>
 <body>
   <script>
-    if (!localStorage.getItem('visited')) {
-      localStorage.setItem('visited', 'true');
-      while (true) {} // Simulate server hang (infinite load)
-    }
+    while (true) {}
   </script>
+<header>
+ <img src="Onepotrecipes.png" alt="Logo" style="width: 15%; height: auto; margin-top: 20px;">
+</header>
 
-  <header>
-    <img src="Onepotrecipes.png" alt="Logo" style="width: 15%; height: auto; margin-top: 20px;">
-  </header>
+<div class="container">
+  <h1>One Pot Recipes</h1>
 
-  <div class="container">
-    <h1>One Pot Recipes</h1>
-
-    <div class="search-container">
-      <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for recipes...">
-    </div>
-
-    <ul id="recipeList">
-      <li>
-        <strong>Sambar:</strong> <a href="https://www.instagram.com/reel/C4I_DgaIpZ-/?igsh=YTkyd3plOXdieDdh">Watch Now</a>
-      </li>
-      <li>
-        <strong>Veggie Sidedish / Poriyal:</strong> <a href="https://www.instagram.com/reel/C4K29eco-Ua/?igsh=MXB2eXpocmlnMDJnMw==">Watch Now</a>
-      </li>
-      <!-- Add more recipes as needed -->
-    </ul>
+  <div class="search-container">
+    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for recipes...">
   </div>
 
-  <footer>
-    <p>&copy; 2024 <a class="text-blue-500 hover:underline" href="https://www.instagram.com/one_pot__recipes">@_onepotrecipes</a></p>
-  </footer>
+  <ul id="recipeList">
+    <li>
+      <strong>Sambar:</strong> <a href="https://www.instagram.com/reel/C4I_DgaIpZ-/?igsh=YTkyd3plOXdieDdh">Watch Now</a>
+    </li>
+    <li>
+      <strong>Veggie Sidedish / Poriyal:</strong> <a href="https://www.instagram.com/reel/C4K29eco-Ua/?igsh=MXB2eXpocmlnMDJnMw==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Channa Masala:</strong> <a href="https://www.instagram.com/reel/C4OFJCBI6dD/?igsh=ZTBucXg4YjhndHZi">Watch Now</a>
+    </li>
+    <li>
+      <strong>Brownie:</strong> <a href="https://www.instagram.com/reel/C4QvVl-IB2h/?igsh=bWpjYmowcGFqbHQ2">Watch Now</a>
+    </li>
+    <li>
+      <strong>Tomato Rice:</strong> <a href="https://www.instagram.com/reel/C4Q1lSHImUM/?igsh=MWx6NXB3amM2dWNqcg==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Aloo Paratha Stuff:</strong> <a href="https://www.instagram.com/reel/C4YazyRNEc5/?igsh=YWZ2YXNpOXgzOHAw">Watch Now</a>
+    </li>
+    <li>
+      <strong>Puran Poli Stuff:</strong> <a href="https://www.instagram.com/reel/C4aUy1wt4NO/?igsh=MXQxYTFidzdjcW12cg==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Aval Payasam:</strong> <a href="https://www.instagram.com/reel/C4cpBzONSRP/?igsh=MXJ0MmJrMTN6bmJ5dA==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Tadka Curd:</strong> <a href="https://www.instagram.com/reel/C4f7AwON9j7/?igsh=MW80dzZ5Y3picHVvZQ==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Orange Squash:</strong> <a href="https://www.instagram.com/reel/C4iZCPqt1YS/?igsh=MWV6b3R2MmxsdDZieA==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Tomato Chutney:</strong> <a href="https://www.instagram.com/reel/C4qVU8BtfyW/?igsh=MTFkMTIxbXY5eG51ZA==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Tomato Thokku:</strong> <a href="https://www.instagram.com/reel/C4s_qjEtxkh/?igsh=MXNxbzd5aGdwbHMwNA==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Sambar without tamarind:</strong> <a href="https://www.instagram.com/reel/C4vshSIrq4_/?igsh=bmJnYnBnOTY0NDN4">Watch Now</a>
+    </li>
+    <li>
+      <strong>Vegetable Kurma (hotel style):</strong> <a href="https://www.instagram.com/reel/C4yGl4xScSy/?igsh=emo3dWgwcWoxc2cz">Watch Now</a>
+    </li>
+    <li>
+      <strong>Peanut butter:</strong> <a href="https://www.instagram.com/reel/C40zc3nNlEw/?igsh=MWxma3FzcjJqcmp1aw==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Sharjah (Banana shake):</strong> <a href="https://www.instagram.com/reel/C43Wz7jN4zO/?igsh=MTBxYWF2dWplZGRiZA==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Sandwich stuff:</strong> <a href="https://www.instagram.com/reel/C48CUh8tBHn/?igsh=cmEwa203ZnkxcnB6">Watch Now</a>
+    </li>
+    <li>
+      <strong>Ven Pongal:</strong> <a href="https://www.instagram.com/reel/C4_BM7RNrVH/?igsh=OHczenNhZGZ4eDA1">Watch Now</a>
+    </li>
+    <li>
+      <strong>Peanut Chutney:</strong> <a href="https://www.instagram.com/reel/C5BzGVjLmo6/?igsh=MXVsenNudWxseDl5ag==">Watch Now</a>
+    </li>
+    <li>
+      <strong>Paneer Butter Masala:</strong> <a href="https://www.instagram.com/reel/C5EOLNxNsgX/?igsh=ZTlseWJrbmZhanVs">Watch Now</a>
+    </li>
+    <li>
+      <strong>Andhra style palak pappu:</strong> <a href="https://www.instagram.com/reel/C5G5ZjJr1pX/?igsh=MWd2bmZnNmZzeDNoMg==">Watch Now</a>
+    </li>
+  </ul>
+</div>
+<script>
+function searchFunction() {
+  // Get the input value and convert it to lowercase
+  var input, filter, ul, li, strong, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toLowerCase();
+  ul = document.getElementById('recipeList');
+  li = ul.getElementsByTagName('li');
 
-  <script>
-    function searchFunction() {
-      const input = document.getElementById('myInput');
-      const filter = input.value.toLowerCase();
-      const ul = document.getElementById('recipeList');
-      const li = ul.getElementsByTagName('li');
-
-      for (let i = 0; i < li.length; i++) {
-        const strong = li[i].getElementsByTagName('strong')[0];
-        if (strong) {
-          const txtValue = strong.textContent || strong.innerText;
-          li[i].style.display = txtValue.toLowerCase().includes(filter) ? '' : 'none';
-        }
+  // Loop through all list items, and hide those that don't match the search query
+  for (i = 0; i < li.length; i++) {
+    strong = li[i].getElementsByTagName('strong')[0];
+    if (strong) {
+      txtValue = strong.textContent || strong.innerText;
+      if (txtValue.toLowerCase().indexOf(filter) > -1) {
+        li[i].style.display = '';
+      } else {
+        li[i].style.display = 'none';
       }
     }
-  </script>
-</body>
-</html>
+  }
+}
+</script>
+
+<footer>
+  <p>&copy; 2024 <a class="text-blue-500 hover:underline" href="https://www.instagram.com/one_pot__recipes">@_onepotrecipes</a></p>
+</footer>
