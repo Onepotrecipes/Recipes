@@ -1,99 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>One Pot Recipes List</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F2F2F2;
-  }
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  header {
-    text-align: center;
-    padding-bottom: 20px;
-  }
-  header img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  footer {
-    text-align: center;
-    padding-top: 20px;
-  }
-  h1 {
-    text-align: center;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 0;
-    background-color: #fff; /* White background */
-    padding: 10px; /* Adjust padding as needed */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  .search-container {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  input[type=text] {
-    width: 50%;
-    padding: 10px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-  }
-  input[type=text]:focus {
-    border-color: #007bff;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    margin: 20px 5px;
-    line-height: 1.6;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 10px;
-  }
-  strong {
-    font-weight: bold;
-  }
-  a {
-    text-decoration: none;
-    color: #007bff;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Pot Recipes | Easy Homemade Cooking Ideas</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover delicious and easy one pot recipes including sambar, channa masala, tomato rice, desserts, and more. Perfect for quick homemade meals.">
+  <meta name="keywords" content="one pot recipes, easy recipes, indian recipes, homemade meals, sambar, tomato rice, kurma, paneer butter masala, desserts, chutneys">
+  <meta name="author" content="One Pot Recipes">
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="One Pot Recipes | Easy Homemade Cooking Ideas">
+  <meta property="og:description" content="Explore a collection of quick and easy one pot recipes including South Indian, North Indian, and dessert options.">
+  <meta property="og:image" content="Onepotrecipes.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="One Pot Recipes | Easy Homemade Cooking Ideas">
+  <meta name="twitter:description" content="Quick and easy one pot meals including sambar, kurma, desserts, and more.">
+  <meta name="twitter:image" content="Onepotrecipes.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<header>
- <img src="Onepotrecipes.png" alt="Logo" style="width: 15%; height: auto; margin-top: 20px;">
-</header>
+<body class="bg-gray-100 font-sans">
 
-<div class="container">
-  <h1>One Pot Recipes</h1>
+  <!-- Header -->
+  <header class="text-center py-6">
+    <img src="Onepotrecipes.png" alt="One Pot Recipes Logo" class="w-32 mx-auto shadow-md rounded">
+  </header>
 
-  <div class="search-container">
-    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for recipes...">
-  </div>
+  <!-- Main Container -->
+  <main class="max-w-3xl mx-auto px-4">
+    <h1 class="text-3xl font-bold text-center text-gray-800 uppercase tracking-wide bg-white py-4 rounded shadow">
+      One Pot Recipes
+    </h1>
 
-  <ul id="recipeList">
+    <!-- Search Box -->
+    <div class="text-center my-6">
+      <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for recipes..."
+        class="w-1/2 p-3 border-2 border-gray-300 rounded focus:border-blue-500 outline-none">
+    </div>
+
+    <!-- Recipe List -->
+<ul id="recipeList">
     <li>
       <strong>Sambar:</strong> <a href="https://www.instagram.com/reel/C4I_DgaIpZ-/?igsh=YTkyd3plOXdieDdh">Watch Now</a>
     </li>
@@ -158,30 +111,32 @@
       <strong>Andhra style palak pappu:</strong> <a href="https://www.instagram.com/reel/C5G5ZjJr1pX/?igsh=MWd2bmZnNmZzeDNoMg==">Watch Now</a>
     </li>
   </ul>
-</div>
-<script>
-function searchFunction() {
-  // Get the input value and convert it to lowercase
-  var input, filter, ul, li, strong, i, txtValue;
-  input = document.getElementById('myInput');
-  filter = input.value.toLowerCase();
-  ul = document.getElementById('recipeList');
-  li = ul.getElementsByTagName('li');
+  </main>
 
-  // Loop through all list items, and hide those that don't match the search query
-  for (i = 0; i < li.length; i++) {
-    strong = li[i].getElementsByTagName('strong')[0];
-    if (strong) {
-      txtValue = strong.textContent || strong.innerText;
-      if (txtValue.toLowerCase().indexOf(filter) > -1) {
-        li[i].style.display = '';
-      } else {
-        li[i].style.display = 'none';
+  <!-- Footer -->
+  <footer class="text-center py-6 mt-8">
+    <p class="text-gray-600">&copy; 2025 
+      <a href="https://www.instagram.com/one_pot__recipes" class="text-blue-600 hover:underline">@one_pot__recipes</a>
+    </p>
+  </footer>
+
+  <!-- Search Function Script -->
+  <script>
+    function searchFunction() {
+      var input, filter, ul, li, strong, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toLowerCase();
+      ul = document.getElementById('recipeList');
+      li = ul.getElementsByTagName('li');
+
+      for (i = 0; i < li.length; i++) {
+        strong = li[i].getElementsByTagName('strong')[0];
+        if (strong) {
+          txtValue = strong.textContent || strong.innerText;
+          li[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? "" : "none";
+        }
       }
     }
-  }
-}
-</script>
-
-<footer>
-  <p>&copy; 2025 <a href="https://www.instagram.com/one_pot__recipes"> @one_pot__recipes </a></p></footer>
+  </script>
+</body>
+</html>
